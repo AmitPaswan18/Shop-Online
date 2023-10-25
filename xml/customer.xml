@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customers>
+    <customer>
+        <id>1</id>
+        <firstName>John</firstName>
+        <surname>Doe</surname>
+        <email>john@example.com</email>
+        <password>password123</password>
+    </customer>
+    <customer>
+        <id>2</id>
+        <firstName>Jane</firstName>
+        <surname>Smith</surname>
+        <email>jane@example.com</email>
+        <password>securepass456</password>
+    </customer>
+<customer><id>65362e32501db</id><firstName>admin</firstName><surname>admin</surname><email>admin@gmail.com</email><password>$2y$10$UgKMml2uCSF64tbIhLnQ1OFASBtMyzLeVv8I63uew9n2fslj4uZca</password></customer><customer><id>653696ab06d48</id><firstName>admin1</firstName><surname>admin1</surname><email>admin1@gmail.com</email><password>$2y$10$IpttoeF5coHvd/sIWbttveC3UvGjlUqkSnEhcNp57V9.VDdsGt9Nm</password></customer><customer><id>6536a2e8c3d77</id><firstName>admin3</firstName><surname>admin3</surname><email>admin3@gmail.com</email><password>$2y$10$e970TB6R6snbxMSkP9T/be7rXKcrhpBV3/j/xSZtwGtBePHqfhPhO</password></customer><customer><id>6536a97e04b6c</id><firstName>newuser</firstName><surname>newuser</surname><email>newuser@gmail.com</email><password>$2y$10$0wC.Aty7nHUZs0waVnBvPO.h11ql/q.eRkr2tE0D9ukSjWYXBsRFq</password></customer><customer><id>6536af0136599</id><firstName>admin3</firstName><surname>admin3</surname><email>admin3@gmail.com</email><password>$2y$10$BGc7Yxe2GnI1GIWmjhx6WOoQXBd89yTA8aG8izqbvVhFOA1bj//9O</password></customer></customers>

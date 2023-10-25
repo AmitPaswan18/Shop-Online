@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop Online Login Page</title>
+
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1#logo-name {
+    font-size: 36px;
+    margin: 20px;
+    color: #333;
+}
+
+button[type="button"] {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    margin: 15px;
+    cursor: pointer;
+    border-radius: 10px; 
+}
+
+#login-form {
+    background-color: #fff;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+a{
+    text-decoration: none;
+    color: #f0f0f0;
+}
+h6, h5 {
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+p a{
+    color: blue;
+}
+input[type="submit"] {
+    background-color: #27ae60;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="reset"] {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+
+    <h1 id="logo-name">Shop Online</h1>
+  
+    <form   id="login-form" action="login.php" method="post">
+        <p>Please login below or to register as a new user.</p>
+        <p> <a href="/registration.html">Register Here</a></p>
+         <h5>Login details</h5>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <input type="submit" value="Login">
+    </form>
+   <script>
+document.getElementById('login-form').addEventListener('submit', function (e) {
+    e.preventDefault(); 
+
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'login.php', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            if (response.success) {
+                alert(response.message);
+                window.location.href = 'listing.html';
+            } else {
+                alert(response.message);
+            }
+        }
+    };
+    var data = 'email=' + email + '&password=' + password;
+    xhr.send(data);
+});
+
+
+   </script>
+</body>
+</html>

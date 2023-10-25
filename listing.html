@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop online Item Listing</title>
+    <style>
+
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0; 
+        }
+
+        #logo-name {
+            font-size: 24px;
+        }
+        a{
+            color: #f0f0f0;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        #listing-form {
+            width: 300px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        #additionalInput {
+            width: 50px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        h6 {
+            text-align: center;
+        }
+        .input-container {
+    display: flex;
+    gap: 5px; 
+}
+
+.input-container input {
+    flex: 1; 
+}
+
+    </style>
+</head>
+<body>
+    <h1 id="logo-name">Shop Online</h1>
+    <button><li style="list-style: none;"><a style=" text-decoration: none;" href="index.html">Home</a></li></button>
+    <button><li style="list-style: none;"><a style=" text-decoration: none;" href="listing.html">Listing</a></li></button>
+    <button><li style="list-style: none;"><a style=" text-decoration: none;" href="bidding.html">Bidding</a></li></button>
+    <button><li style="list-style: none;"><a style=" text-decoration: none;" href="maintainance.html">Maintenance</a></li></button>
+    <button type="button"><li style="list-style: none;"><a style=" text-decoration: none;" href="index.html">Logout</a></li></button>
+     <p>To create a listing, enter listing details below</p>
+    <form id="listing-form" action="listing.php" method="post">
+        <label for="itemName">Item Name:</label>
+        <input type="text" id="itemName" name="itemName" required><br>
+        <label for="category">Category:</label>
+        <select id="category" name="category">
+            <option value="Electronics">Electronics</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Books">Books</option>
+            <option value="Furniture">Furniture</option>
+            <option value="other">Other</option>
+        </select><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea><br>
+
+
+        <label for="reservePrice">Start Price:</label>
+        <div class="input-container">
+            <input type="number" id="startprice" name="startPrice" required>
+            <input type="text" id="additionalInput" name="additionalInput" value="00"><br>
+        </div>
+
+        <label for="reservePrice">Reserve Price:</label>
+        <div class="input-container">
+            <input type="number" id="reservePrice" name="reservePrice" required>
+            <input type="text" id="additionalInput" name="additionalInput" value="00">
+        </div><br>
+        
+
+        <label for="buyItNowPrice">Buy-It-Now Price:</label>
+       <div class="input-container">
+         <input type="number" id="buyItNowPrice" name="buyItNowPrice" required>
+        <input type="text" id="additionalInput" name="additionalInput" value="00"><br>
+       </div>
+
+       <label for="duration">Duration:</label>
+       <div class="input-container">
+           <input type="number" id="days" name="days" placeholder="Days">
+           <input type="number" id="hours" name="hours" placeholder="Hours">
+           <input type="number" id="minutes" name="minutes" placeholder="Minutes" required>
+       </div><br>
+       <input type="hidden" id="itemNumber" name="itemNo" value="generateItemNumber">
+
+       <input type="hidden" id="startDate" name="startDate" value="2023-10-23">
+
+       <input type="hidden" id="startTime" name="startTime" value="09:08:32">
+
+
+        <input type="submit" value="Listing">
+        <input type="submit" value="Reset">
+    </form>
+    <script></script>
+</body>
+</html>
